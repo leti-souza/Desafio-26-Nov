@@ -1,0 +1,39 @@
+TABELA: Categoria
+
+| Atributo     | Tipo    | Obrigatório |
+| ------------ | ------- | ----------- |
+| id_categoria | inteiro | sim         |
+| nome         | texto   | sim         |
+
+
+TABELA: Editora
+
+| Atributo   | Tipo    | Obrigatório |
+| ---------- | ------- | ----------- |
+| id_editora | inteiro | sim         |
+| nome       | texto   | sim         |
+
+
+TABELA: Livro
+
+| Atributo       | Tipo                   | Obrigatório |
+| -------------- | ---------------------- | ----------- |
+| id_livro       | inteiro                | sim         |
+| titulo         | texto                  | sim         |
+| autor          | texto                  | sim         |
+| preco          | decimal                | sim         |
+| estoque_atual  | inteiro                | sim         |
+| estoque_minimo | inteiro (padrão = 5)   | sim         |
+| id_categoria   | referência → Categoria | sim         |
+| id_editora     | referência → Editora   | sim         |
+
+
+TABELA: Movimentação de Estoque
+
+| Atributo   | Tipo                  | Obrigatório |
+| ---------- | --------------------- | ----------- |
+| id_mov     | inteiro               | sim         |
+| id_livro   | referência → Livro    | sim         |
+| tipo_mov   | texto (entrada/saida) | sim         |
+| quantidade | inteiro               | sim         |
+| data_mov   | data/hora             | sim         |

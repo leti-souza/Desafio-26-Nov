@@ -1,0 +1,15 @@
+1 - O estoque nunca pode ficar negativo.
+    - Saída só é permitida se houver quantidade suficiente.
+
+2 - Todo livro deve ter um estoque mínimo definido.
+    - Valor padrão: 5 unidades.
+
+3 - Quando o estoque estiver abaixo do mínimo, o sistema deve exibir um alerta visual grande na tela inicial.
+    
+4 - Todo movimento (entrada ou saída) deve ser registrado na tabela de MovimentaçãoEstoque.
+
+5 - Não pode cadastrar livro sem Categoria e sem Editora.
+
+6 - Preço do livro não pode ser negativo.
+
+7 - Título do livro deve ser único por editora (evita duplicidades desnecessárias).

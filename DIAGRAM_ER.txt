@@ -1,0 +1,29 @@
+[CATEGORIA]
+- id_categoria (PK)
+- nome
+
+[EDITORA]
+- id_editora (PK)
+- nome
+
+[LIVRO]
+- id_livro (PK)
+- titulo
+- autor
+- preco
+- estoque_atual
+- estoque_minimo
+- id_categoria (FK)
+- id_editora (FK)
+
+[MOVIMENTACAO_ESTOQUE]
+- id_mov (PK)
+- id_livro (FK)
+- tipo_mov (entrada/saida)
+- quantidade
+- data_mov
+
+Relacionamentos:
+[Categoria] ---> Uma Categoria pode ter muitos Livros ----> [Livro]
+[Editora]  ----> Uma Editora pode ter muitos Livros ----> [Livro]
+[Livro] ----> Um Livro pode ter muitas Movimentações de Estoque [MovimentacaoEstoque]
